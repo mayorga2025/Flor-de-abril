@@ -4,7 +4,7 @@ Proyecto estático en HTML/CSS/JavaScript que replica el catálogo de trajes tí
 
 ## Estructura
 ```
-flor-de-vida/
+flor-de-abril/
   index.html
   styles.css
   app.js
@@ -17,8 +17,8 @@ Usa las mismas imágenes y logo que el proyecto original.
 En PowerShell:
 ```powershell
 cd flor-de-vida
-python -m http.server 5050
-# Abrir http://localhost:5050
+python -m http.server
+# Abrir http://localhost:8000 o simplemente abrir `index.html` directamente
 ```
 (Si no tienes Python, abre `index.html` directamente o usa la extensión Live Server.)
 
@@ -27,7 +27,7 @@ Opción 1: Copia la carpeta `flor-de-vida` a `docs/` (o su contenido) para servi
 ```powershell
 # Desde la raíz del repo
 Remove-Item docs -Recurse -Force -ErrorAction SilentlyContinue
-Copy-Item flor-de-vida docs -Recurse
+Copy-Item flor-de-abril docs -Recurse
 git add docs -A
 git commit -m "deploy: flor de abril static version"
 git push origin main
