@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flor de Abril - Catálogo de Trajes Típicos</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header fade-in">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="assets/flor-de-abril.svg" alt="Flor de Abril" class="logo" />
+          <div>
+            <h1>Flor de Abril</h1>
+            <p class="tag">Alquiler de trajes típicos de Nicaragua</p>
+          </div>
+        </div>
+        <nav class="nav-desktop">
+          <button data-scroll="catalogo">Catálogo</button>
+          <button data-scroll="galeria">Galería</button>
+          <button data-scroll="emprendedor">Sobre Nosotros</button>
+          <button data-scroll="contacto">Contacto</button>
+          <button class="btn primary" data-scroll="contacto">Reservar</button>
+        </nav>
+        <button id="menuToggle" class="btn ghost mobile-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+      <nav id="mobileNav" class="mobile-nav hidden">
+        <button data-scroll="catalogo">Catálogo</button>
+        <button data-scroll="galeria">Galería</button>
+        <button data-scroll="emprendedor">Sobre Nosotros</button>
+        <button data-scroll="contacto">Contacto</button>
+        <button class="btn primary" data-scroll="contacto">Reservar</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero gradient-bg">
+        <div class="container hero-inner">
+          <div class="chip scale-in">
+            <img src="assets/flor-de-abril.svg" alt="logo" class="chip-logo" />
+            <span>Flor de Abril</span>
+          </div>
+          <h2 class="slide-down">Alquiler de Trajes Típicos de Nicaragua</h2>
+          <p class="lead slide-up">Celebra tus eventos especiales con la elegancia y tradición de nuestra cultura. Amplia selección para todas las edades y ocasiones.</p>
+          <div class="hero-actions fade-in">
+            <button class="btn accent" data-scroll="catalogo">Ver Catálogo</button>
+            <button class="btn outline" data-scroll="contacto">Contactar</button>
+          </div>
+        </div>
+        <div class="hero-bottom-fade"></div>
+      </section>
+
+      <!-- Catálogo -->
+      <section id="catalogo" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="underline">Nuestro Catálogo</h2>
+            <p>Descubre nuestra colección de trajes típicos nicaragüenses.</p>
+          </div>
+          <div class="filters">
+            <span class="filter-title">Filtrar por Región</span>
+            <div id="regionButtons" class="filter-buttons"></div>
+          </div>
+          <div id="costumeGrid" class="grid catalog-grid"></div>
+        </div>
+      </section>
+
+      <!-- Galería -->
+      <section id="galeria" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Galería e Historia</h2>
+            <p>La historia y características de nuestros trajes.</p>
+          </div>
+          <div id="galleryGrid" class="grid gallery-grid"></div>
+          <div id="galleryDetail" class="detail-card hidden"></div>
+        </div>
+      </section>
+
+      <!-- Sobre Nosotros -->
+      <section id="emprendedor" class="section about">
+        <div class="container about-layout">
+          <div class="about-image fade-in"></div>
+          <div class="about-text">
+            <h2>Sobre Nuestro Emprendimiento</h2>
+            <p>Flor de Abril nace de la pasión por mantener vivas nuestras tradiciones. Cada traje cuenta una historia y celebra una región de Nicaragua.</p>
+            <p class="highlight">Misión: Hacer accesible la vestimenta tradicional nicaragüense para que cada persona pueda honrar nuestra cultura.</p>
+            <ul class="feature-list">
+              <li>Pasión por la cultura</li>
+              <li>Calidad garantizada</li>
+              <li>Atención personalizada</li>
+              <li>Servicio rápido</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto" class="section contact alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes preguntas o quieres reservar? Elige tu medio preferido.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="card fade-in">
+              <h4>Teléfono / WhatsApp</h4>
+              <p>+505 5819 2798</p>
+              <button class="btn outline" onclick="window.open('https://wa.me/50558192798','_blank')">Enviar mensaje</button>
+            </div>
+            <div class="card fade-in">
+              <h4>Correo</h4>
+              <p>info@trajestipicosnica.com</p>
+              <button class="btn outline" onclick="window.location.href='mailto:info@trajestipicosnica.com'">Enviar correo</button>
+            </div>
+            <div class="card fade-in">
+              <h4>Ubicación</h4>
+              <p>Managua, Nicaragua</p>
+              <small>Entregas a domicilio disponibles</small>
+            </div>
+            <div class="card fade-in">
+              <h4>Redes Sociales</h4>
+              <div class="socials">
+                <button class="btn outline" onclick="window.open('https://instagram.com','_blank')">Instagram</button>
+                <button class="btn outline" onclick="window.open('https://facebook.com','_blank')">Facebook</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Hecho con <span class="heart">❤</span> en Nicaragua</p>
+  <p>© 2025 Flor de Abril - Trajes Típicos de Nicaragua</p>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden" aria-hidden="true" role="dialog">
+      <div class="modal-content scale-in">
+        <button id="modalClose" class="modal-close" aria-label="Cerrar modal">✕</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
